@@ -1,0 +1,5 @@
+[architecture]
+domain = "reference-solutions"
+capability = "analytics-lifecycle"
+kind = "solution-overview"
+solution = "synthetic-website-analytics-platform"
