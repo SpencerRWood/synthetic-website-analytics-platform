@@ -1,0 +1,32 @@
+["tool"]
+
+["tool"."wood"]
+
+["tool"."wood"."openproject"]
+"project_id" = 3
+"initiative_id" = 552
+
+["tool"."wood"."branching"]
+"strategy" = "integration"
+"release_id" = 26
+"integration_branch" = "development"
+"scope_reference" = "https://projects.woodhost.cloud/work_packages/558 activity 1481; canonical fleet migration of the documentation-only platform repository; no publication artifacts or deployment added."
+
+[dependency-groups]
+dev = ["pre-commit>=4.0,<5"]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = []
+
+[tool.wood.verify]
+version = 1
+retry_safe = true
+
+[[tool.wood.verify.checks]]
+name = "documentation-contract"
+argv = ["python3", "scripts/validate_docs.py"]
+required = true
+timeout_seconds = 30
