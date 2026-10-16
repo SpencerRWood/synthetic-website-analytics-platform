@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: documentation-contract
+        name: Validate documentation links and TOML
+        entry: python3 scripts/validate_docs.py
+        language: system
+        pass_filenames: false
+        always_run: true
